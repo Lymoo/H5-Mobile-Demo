@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>雍正去哪了</title>
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/animation.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="keywords" content="雍正去哪了？">
+		<meta name="description" content="雍正去哪了？">
+	</head>
+	<body>
+		<article>
+			<section id="loading">
+				<img src="imgs/loading.gif" alt="加载动画">
+			</section>
+			<audio src="audio/bgm.mp3" id="bgm" loop preload autoplay></audio>
+			<!-- 功能键 -->
+			<section id="option">
+				<div id="share"></div>
+				<div id="musicBg_on" class="musidBg">
+					<div id="music_on" class="musicActive"></div>
+				</div>
+				<div id="musicBg_off" class="musicBgOff">
+					<div id="music_off" class="musicOff"></div>
+				</div>
+			</section>
+			<!-- 首页 -->
+			<section id="page1">
+				<div class="door">
+					<img id="doorLeft" src="imgs/door_left.png">
+					<img id="doorRight" src="imgs/door_right.png">
+				</div>
+				<div id="mask">
+					<div id="start"></div>
+				</div>
+				<div id="logo"></div>
+			</section>
+			<!-- 朝廷 -->
+			<section id="page2">
+				<div id="courBox">
+					<div id="head1"></div>
+					<div id="head2"></div>
+					<div id="head3"></div>
+					<div id="head4"></div>
+					<div id="head5"></div>
+					<div id="ren1"></div>
+					<div class="ren2"></div>
+					<div id="ren3"></div>
+					<div class="dialog dialog1 dialogRight" id="dialog1">$%%&&&<br>**\#\#</div>
+					<div class="dialog dialog2 dialogLeft" id="dialog2">%&%\\#Y<br>\#Y......</div>
+					<div class="dialog dialog3 dialogLeft" id="dialog3">@@@\#\#$<br>%***</div>
+					<div class="dialog dialog4 dialogRight" id="dialog4">皇上这是去<br>哪了？</div>
+					<div class="dialog dialog5 dialogLeft" id="dialog5">又"不务正业"<br>了吧？</div>
+					<div id="character">
+						<div class="body"></div>
+						<div class="head1" id="character_head1"></div>
+						<div class="head2" id="character_head2"></div>
+						<div class="think" id="character_think">
+							<div id="hunter">
+								<div id="hunterHand"></div>
+								<div class="hunterBody"></div>
+							</div>
+							<div id="poet">
+								<div id="poetHead"></div>
+							</div>
+						</div>
+						<div class="say" id="characterSay">
+							<p id="characterSayContent">我的祖宗哎，这闹的是哪一出啊！</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- 街道 -->
+			<section id="page3">
+				<div id="mountain"></div>
+				<div id="sun"></div>
+				<div id="cloud"></div>
+				<div id="building">
+					<!-- 阿兰编竹 -->
+					<div id="alan">
+						<div id="alanBody">
+							<div id="alanfoot"></div>
+						</div>
+						<div class="dialog dialogRight" id="alan_dialog">
+							<p>纯手工制作，走过路过，不要错过~</p>
+						</div>
+					</div>
+					<!-- 拉二胡大爷 -->
+					<div id="erhu">
+						<div class="erhuHand"></div>
+						<div class="musical"></div>
+					</div>
+					<!-- 打铁匠 -->
+					<div id="datie" class="datie">
+						<div class="datieHand"></div>
+						<div class="datieBody"></div>
+						<div class="datieHead"></div>
+						<div class="spark"></div>
+						<div class="remind" id="dtRemind"></div>
+						<div class="dialog dialogRight" id="datie_dialog">
+							<p>爷，要不要来副宝剑呀！</p>
+						</div>
+					</div>
+					<!-- 贴膜人 -->
+					<div class="tiemo" id="tiemo">
+						<div class="tiemoHand"></div>
+						<div class="tiemoBody"></div>
+						<div class="dialog dialogRight" id="tiemo_dialog">
+							<p>智能通讯设备表面高分子线性处理！</p>
+						</div>
+					</div>
+					<!-- 布店老板 -->
+					<div class="budian" id="budian">
+						<div class="budianBody"></div>
+						<div class="dialog dialogRight" id="budian_dialog">
+							<p>卖布嘞，做里儿的，做面儿的......</p>
+						</div>
+					</div>
+					<!-- 理发师傅 -->
+					<div class="lifa" id="lifa">
+						<div class="lifaHand"></div>
+						<div class="lifashi"></div>
+						<div class="dialog dialogRight" id="lifa_dialog">
+							<p>洗剪吹5元5元！爷，换个发型呗~</p>
+						</div>
+					</div>
+					<!-- 客官 -->
+					<div class="guest" id="guest">
+						<div class="guestLeftHand"></div>
+						<div class="guestRightHand"></div>
+						<div class="dialog dialogRight" id="guest_dialog">
+							<p>哥俩好啊，喝啤酒啊~</p>
+						</div>
+					</div>
+					<!-- 爆米花老伯 -->
+					<div class="baomihua" id="baomihua">
+						<div class="smoke"></div>
+						<div class="daizi"></div>
+						<div class="light"></div>
+						<div class="remind" id="bmhRemind"></div>
+						<div class="dialog dialogLeft" id="baomihua_dialog">
+							<p>情侣看电影必备，客官来点爆米花~</p>
+						</div>
+					</div>
+					<!-- 瓷器店老板 -->
+					<div class="ciqi" id="ciqi">
+						<div class="ciqiHand"></div>
+						<div class="ciqiBody"></div>
+						<div class="remind" id="cqRemind"></div>
+						<div class="dialog dialogLeft" id="ciqi_dialog">
+							<p>客官这粉彩也不错哦~</p>
+						</div>
+					</div>
+					<!-- 小猫 -->
+					<div class="cat"></div>
+					<!-- 乌鸦 -->
+					<div id="crow"></div>
+					<!-- 照相的人 -->
+					<div class="photosPeople">
+						<div class="peopleHand"></div>
+						<div class="peopleBody"></div>
+					</div>
+					<!-- 雍正 -->
+					<div class="yongzheng" id="yongzheng">
+						<div class="yongzhengHand" id="yongzhengHand"></div>
+						<div class="yongzhengBody" id="yongzhengBody"></div>
+						<div class="camera"></div>
+						<div class="remind" id="yzRemind"></div>
+						<div class="shining"></div>
+						<div class="dialog dialogRight" id="yongzheng_dialog">
+							<p>我要呲【爆米花】</p>
+						</div>
+					</div>
+					<!-- 太监 -->
+					<div class="eunuch" id="eunuch">
+						<div class="eunuchBody" id="eunuchBody"></div>
+						<div class="eunuchHead"></div>
+						<div class="dialog dialogLeft" id="eunuch_dialog">
+							<p>咦，这不是皇上的玉佩吗？</p>
+						</div>
+						<div id="haveYu"></div>
+						<div id="haveBaoMiHua"></div>
+					</div>
+					<!-- 卖糖葫芦的 -->
+					<div class="tanghulu" id="tanghulu">
+						<div class="tanghuluBody" id="tanghuluBody"></div>
+						<div class="yu" id="yu"></div>
+						<div class="yushining" id="yushining"></div>
+						<div class="remind" id="thlRemind"></div>
+						<div id="haveDaTie"></div>
+						<div id="haveCiqi"></div>
+					</div>
+					<div id="remindRight"></div>
+					<div id="remindLeft"></div>
+				</div>
+				<!-- 移动按钮 -->
+				<div id="moveBtn">
+					<div id="left_btn"></div>
+					<div id="right_btn"></div>
+				</div>
+				<!-- 剧情对话层 -->
+				<div id="talkBox">
+					<div id="eunuchTalk" class="talkBoxStyle">
+						<div id="eunuchFace" class="eunuchFaceStyle eunuchFace1"></div>
+						<p id="tjText" class="text">这位师傅，您这玉佩瞧着可真眼熟。</p>
+					</div>
+					<div id="tanghuluTalk" class="other talkBoxStyle">
+						<div class="tanghuluFace otherTalkFace"></div>
+						<p id="thlText" class="text"></p>
+					</div>
+					<div id="datieTalk" class="other talkBoxStyle">
+						<div class="datieFace otherTalkFace"></div>
+						<p id="datieText" class="text"></p>
+					</div>
+					<div id="ciqiTalk" class="other talkBoxStyle">
+						<div class="ciqiFace otherTalkFace"></div>
+						<p id="ciqiText" class="text"></p>
+					</div>
+					<div id="yzTalk" class="other talkBoxStyle">
+						<div class="yzFace otherTalkFace"></div>
+						<p id="yzText" class="text"></p>
+					</div>
+					<div id="bmhTalk" class="other talkBoxStyle">
+						<div class="bmhFace otherTalkFace"></div>
+						<p id="bmhText" class="text"></p>
+					</div>
+				</div>
+				<!-- 提问层&获得物品层 -->
+				<div id="questionBox">
+					<div id="questionContent">
+						<div id="dtQuestion">
+							<div class="pic"></div>
+							<div class="text"></div>
+							<div id="lBtn"></div>
+							<div id="rBtn"></div>
+						</div>
+						<div id="getGoods1">
+							<div class="pic"></div>
+							<div class="text"></div>
+							<div id="getBtn"></div>
+						</div>
+						<div id="cqQuestion">
+							<div class="pic"></div>
+							<div class="text"></div>
+							<div id="lBtn2"></div>
+							<div id="rBtn2"></div>
+						</div>
+						<div id="getGoods2">
+							<div class="pic"></div>
+							<div class="text"></div>
+							<div id="getBtn2"></div>
+						</div>
+						<div id="getGoods3">
+							<div class="pic"></div>
+							<div class="text"></div>
+							<div id="getBtn3"></div>
+						</div>
+						<div id="bmhQuestion">
+							<div class="pic"></div>
+							<div class="text"></div>
+							<div id="lBtn3"></div>
+							<div id="rBtn3"></div>
+						</div>
+						<div id="getGoods4">
+							<div class="pic"></div>
+							<div class="text"></div>
+							<div id="getBtn4"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- 朝廷2 -->
+			<section id="page4">
+				<div id="courBox2">
+					<div class="yzHand"></div>
+					<div class="head1" id="page4_head1"></div>
+					<div class="head2" id="page4_head2"></div>
+					<div class="head3" id="page4_head3"></div>
+					<div class="head4" id="page4_head4"></div>
+					<div class="yongzhengTalk dialogRight" id="yongzhengTalk">
+						<p id="yongzhengTalkText">朕微服私访，见市井民俗颇觉有趣。</p>
+					</div>
+					<div class="talk1 dialogRight2" id="talk1">
+						<p>这是要拍纪录片的节奏啊</p>
+					</div>
+					<div class="talk2 dialogLeft" id="talk2">
+						<p>哇塞，终于能拍大片了！</p>
+					</div>
+					<div class="talk3 dialogLeft" id="talk3">
+						<p>皇上，可有奖赏？</p>
+					</div>
+					<div class="talk4 dialogRight" id="talk4">
+						<p>接旨~</p>
+					</div>
+				</div>
+			</section>
+			<!-- 结束页 -->
+			<section id="page5">
+				<div class="door" id="door">
+					<img id="door2Left" src="imgs/door_left.png">
+					<img id="door2Right" src="imgs/door_right.png">
+				</div>
+				<div class="doorMo" id="doorMo"></div>
+				<div class="shengzhi" id="shengzhi">
+					<a class="join" id="join" href="http://www.baidu.com"></a>
+				</div>
+				<div class="juanzhou" id="juanzhou"></div>
+				<div class="juanzhou2" id="juanzhou2"></div>
+				<div class="chuanzhi" id="chuanzhi"></div>
+				<div class="restart" id="restart"></div>
+				<div class="wyLogo" id="wyLogo"></div>
+			</section>
+			<!-- 传旨动画层 -->
+			<section id="page6">
+				<div class="shareContent">
+					<div class="hunterBody"></div>
+					<div class="hunterBody2"></div>
+					<div class="jian"></div>
+					<div class="xian"></div>
+				</div>
+			</section>
+		</article>
+	</body>
+	<script type="text/javascript" src="js/index.js"></script>
+</html>

@@ -1,0 +1,239 @@
+*{margin:0;padding:0}
+body,html{width:100%;height:100%}
+article{width:100%;height:100%;position:relative}
+#loading{position:fixed;left:0;top:0;width:100%;height:100%;background-color:#fff;z-index:10}
+#loading>img{position:absolute;left:50%;top:50%;margin-left:-120px;margin-top:-120px}
+.sprite{background:url(../imgs/sprite.png) no-repeat}
+#option{position:fixed;width:30%;height:7%;right:0;top:2%;z-index:9}
+#option>#share{position:absolute;width:33%;height:88%;background:url(../imgs/share.png) no-repeat;background-size:100% 100%}
+#option>#musicBg_off,#option>#musicBg_on{position:absolute;width:33%;height:60%;left:53%;top:20%}
+.musidBg{background:url(../imgs/music_bg.png) no-repeat;background-size:100% 100%}
+.musicBgOff{background:url(../imgs/music_bg2.png) no-repeat;background-size:100% 100%}
+.musicOff{background:url(../imgs/music2.png) no-repeat;background-size:100% 100%}
+#musicBg_off>#music_off,#musicBg_on>#music_on{position:absolute;width:75%;height:140%;left:17%;top:-34%}
+#musicBg_off{display:none}
+.musicActive{background:url(../imgs/music.png) no-repeat;background-size:100% 100%;animation:musicMove 1.2s infinite}
+#page1{width:100%;height:100%;overflow:hidden;position:absolute;z-index:8;display:none}
+#page1>.door{width:100%;height:100%}
+.door>img{width:50.5%;height:100%;position:absolute}
+#doorRight{right:0}
+#page1>#mask{opacity:1;width:100%;height:100%;position:absolute;top:0;left:0;background:url(../imgs/mask.png)}
+#mask>#start{display:none;position:absolute;width:46.66%;height:14.8%;left:50%;bottom:20%;margin-left:-23.33%;background:url(../imgs/start_on.gif) no-repeat;background-size:100% 100%;animation:startMove .4s .5s linear infinite alternate}
+#page1>#logo{width:76.54%;height:56.8%;position:absolute;top:11.5%;left:50%;margin-left:-38.27%;background:url(../imgs/logo.png) no-repeat;background-size:100% 100%;animation:logoMove .52s .3s ease-out forwards;transform:scale(5);visibility:hidden;transition:all .5s}
+#page2{width:100%;height:100%;position:absolute;display:none;right:0;top:0;overflow:hidden;z-index:7}
+#page2>#courBox{width:100%;height:100%;background:url(../imgs/chaoting_bg.jpg) no-repeat;background-size:100% 100%;position:absolute;top:-26.5%}
+#courBox>div{position:absolute}
+#courBox>#head1{width:17.2%;height:10.199%;top:75.5%;right:1%;background:url(../imgs/tou1.png) no-repeat;background-size:100% 100%}
+#courBox>#head2{width:17.2%;height:10.199%;top:77.3%;left:21%;background:url(../imgs/tou2.png) no-repeat;background-size:100% 100%}
+#courBox>#head3{width:17.2%;height:10.199%;top:67.7%;left:2%;background:url(../imgs/tou3.png) no-repeat;background-size:100% 100%}
+#courBox>#head4{width:17.2%;height:10.199%;top:59.5%;right:2.7%;background:url(../imgs/tou4.png) no-repeat;background-size:100% 100%}
+#courBox>#head5{width:17.2%;height:10.199%;top:51.1%;left:23%;background:url(../imgs/tou5.png) no-repeat;background-size:100% 100%}
+#courBox>#ren1{width:17.87%;height:15.9%;top:59.5%;left:60%;background:url(../imgs/ren1.png) no-repeat;background-size:100% 100%}
+#courBox>.ren2{width:16.333%;height:13.9%;top:67.1%;left:63%;background:url(../imgs/ren2.png) no-repeat;background-size:100% 100%}
+#courBox>#ren3{width:17.87%;height:16.9%;top:75.8%;left:62%;background:url(../imgs/ren3.png) no-repeat;background-size:100% 100%;z-index:7}
+.dialog{opacity:0;width:16.133%;font-size:.8em;font-family:STHeiti,"Microsoft Yahei"}
+.dialogRight{background:url(../imgs/dialog_r.png) no-repeat;background-size:100% 100%}
+.dialogLeft{background:url(../imgs/dialog_l.png) no-repeat;background-size:100% 100%}
+.dialog1{padding:3% 6% 7% 3%;top:68%;left:72%}
+.dialog2{padding:3% 4% 5% 5%;top:70.8%;left:23%}
+.dialog3{padding:3% 6% 7% 3%;top:59.8%;left:5%}
+.dialog4{width:21%;padding:3% 2% 7% 3%;top:50.8%;left:69%}
+.dialog5{width:25%;padding:3% 0 4.5% 3%;top:43.5%;left:25%}
+#character{width:13.067%;height:15.315%;top:26.5%;right:17%}
+#character>div{position:absolute}
+#character>.body{width:72%;height:69%;bottom:0;left:18%;background:url(../imgs/character_body.png) no-repeat;background-size:100% 100%}
+#character>.head1{opacity:1;width:100%;height:60%;top:-11%;background:url(../imgs/character_head1.png) no-repeat;background-size:100% 100%}
+#character>.head2{opacity:0;width:100%;height:60%;top:-11%;background:url(../imgs/character_head2.png) no-repeat;background-size:100% 100%}
+#character>.think{opacity:0;width:266%;height:125%;top:-127%;left:-195%;background:url(../imgs/dialog_bubble.png) no-repeat;background-size:100% 100%}
+#hunter{opacity:0;width:87%;height:86%;top:-2%;left:0;position:absolute}
+#hunter>#hunterHand{width:26%;height:37%;position:absolute;top:53%;left:27%;background:url(../imgs/hunter_left.png) no-repeat;background-size:100% 100%}
+#hunter>.hunterBody{width:59%;height:95%;left:32%;top:6%;position:absolute;background:url(../imgs/hunter.png) no-repeat;background-size:100% 100%}
+#poet{opacity:0;width:80%;height:86%;top:3%;position:absolute;background:url(../imgs/poet_body.png) no-repeat;background-size:100% 100%}
+#poet>#poetHead{width:50%;height:40%;left:22%;top:6%;position:absolute;background:url(../imgs/poet_head.png) no-repeat;background-size:100% 100%}
+#character>.say{opacity:0;width:260%;height:70%;top:-75%;left:-127%;background:url(../imgs/dialog2_r.png) no-repeat;background-size:100% 100%}
+.say>p{width:90%;font-family:STHeiti,"Microsoft Yahei";font-size:.8em;line-height:120%;position:absolute;top:16%;left:7%}
+#page3{width:100%;height:100%;position:absolute;display:none;left:0;top:0;overflow:hidden;z-index:6;background:#ebe2ab}
+#page3 div{position:absolute}
+#page3>#mountain{width:1143.33%;height:75.124%;left:-472%;top:50%;background:url(../imgs/mountain.jpg) repeat-x;background-size:14% 45%}
+#page3>#sun{position:fixed;width:18%;height:10%;right:5%;top:14%;background:url(../imgs/sun.png) repeat-x;background-size:100% 100%;animation:sunMove 18s linear infinite}
+#page3>#cloud{width:809.333%;height:31.51%;top:6%;left:-60%;background:url(../imgs/cloud.png) no-repeat;background-size:100% 100%}
+#page3>#building{width:900%;height:100%;left:-48%;top:0;background:url(../imgs/building.png) 0 0 / cover no-repeat;background-size:100% 100%}
+#moveBtn{width:100%;height:5.887%;position:fixed;bottom:0;left:0}
+#moveBtn>#left_btn{width:12%;height:120%;position:absolute;left:28%;bottom:55%;background:url(../imgs/left_btn.png) no-repeat;background-size:100% 100%}
+#moveBtn>#right_btn{width:12%;height:120%;position:absolute;right:28%;bottom:55%;background:url(../imgs/right_btn.png) no-repeat;background-size:100% 100%}
+#alan{width:1.5%;height:17%;left:29%;top:59.5%;animation:alanWalk 3.72s linear infinite}
+#alan>#alanBody{width:100%;height:100%;animation:alanTurn 3.72s linear infinite}
+#alanfoot{width:100%;height:100%;background:url(../imgs/alan.png) no-repeat;background-size:100% 100%;// animation:alanFoot .36s steps(9,end) infinite;position:absolute}
+#alan>.dialog{opacity:0;width:180%;height:60%;top:-45%;left:-37%}
+.dialog>p{font-family:STHeiti,"Microsoft Yahei";width:90%;height:100%;margin:6% 5% 16% 8%;font-size:.8em}
+.dialogStart{animation:alanDialogStart .56s forwards}
+.dialogEnd{animation:alanDialogEnd .32s forwards}
+#erhu{width:2.5%;height:14%;left:32%;top:61%;background:url(../imgs/erhu.png) no-repeat;background-size:100% 100%}
+#erhu>.erhuHand{width:60%;height:30%;left:-3%;top:45%;background:url(../imgs/erhu_hand.png) no-repeat;background-size:100% 100%;animation:laerhu 1s infinite}
+#erhu>.musical{width:35%;height:37%;right:-11%;top:29%;background:url(../imgs/musical.png) no-repeat;background-size:100% 100%;animation:musical 1.2s infinite}
+.datie{width:2.5%;height:22%;left:39%;top:54%}
+.datie>.datieBody{width:100%;height:100%;background:url(../imgs/datie_body.png) no-repeat;background-size:100% 100%}
+.datie>.datieHead{width:49%;height:38%;left:50%;top:9%;background:url(../imgs/datie_head.png) no-repeat;background-size:100% 100%}
+.datie>.datieHand{width:67%;height:35%;left:24%;top:23%;background:url(../imgs/datie_hand.png) no-repeat;background-size:100% 100%;animation:datieHand .88s infinite}
+.datie>.spark{width:30%;height:20%;left:0;top:56%;background:url(../imgs/spark.png) no-repeat;background-size:100% 100%;animation:spark 1.32s infinite}
+.datie>.remind{display:none;width:40%;height:30%;right:0;top:-26%;background:url(../imgs/remind_down.png) no-repeat;background-size:100% 100%;animation:remindDown 1.24s infinite}
+.datie>.dialog{width:160%;height:50%;top:-45%;left:-10%}
+.tiemo{width:2.6%;height:16%;left:43.4%;top:59%}
+.tiemo>.tiemoHand{width:35%;height:32%;left:46%;top:26%;background:url(../imgs/tiemo_hand.png) no-repeat;background-size:100% 100%;animation:tiemoHand .76s infinite}
+.tiemo>.tiemoBody{width:100%;height:100%;background:url(../imgs/tiemo.png) no-repeat;background-size:100% 100%}
+.tiemo>.dialog{width:155%;height:60%;top:-65%;left:-50%}
+.budian{width:2.2%;height:16%;left:49%;top:59%;animation:budianMove 3.72s linear infinite}
+.budian>.budianBody{width:65%;height:100%;background:url(../imgs/budian.png) no-repeat;background-size:100% 100%;animation:budianTurn 3.72s linear infinite}
+.budian>.dialog{width:155%;top:-48%;left:-60%}
+.lifa{width:4.5%;height:16%;left:53.2%;top:59%;background:url(../imgs/lifa.png) no-repeat;background-size:100% 100%}
+.lifa>.lifaHand{width:36%;height:23%;right:14%;top:24%;background:url(../imgs/lifashi_hand.png) no-repeat;background-size:100% 100%;animation:lifashiHand 1.32s infinite}
+.lifa>.lifashi{width:25%;height:100%;right:0;background:url(../imgs/lifashi.png) no-repeat;background-size:100% 100%}
+.lifa>.dialog{width:88%;top:-35%;left:10%}
+.guest{width:4.5%;height:16%;left:58.6%;top:59%;background:url(../imgs/guest.png) no-repeat;background-size:100% 100%}
+.guest>.guestLeftHand{width:28%;height:30%;left:6%;top:30%;background:url(../imgs/guest_lefthand.png) no-repeat;background-size:100% 100%;animation:guestLeftHand 1s infinite}
+.guest>.guestRightHand{width:28%;height:30%;right:8%;top:30%;background:url(../imgs/guest_righthand.png) no-repeat;background-size:100% 100%;animation:guestRightHand 1s infinite}
+.guest>.dialog{width:88%;top:-35%;left:17%}
+.baomihua{width:4%;height:15%;left:64.4%;top:61%;background:url(../imgs/baomihua.png) no-repeat;background-size:100% 100%}
+.baomihua>.smoke{width:10%;height:20%;left:33%;top:10%;background:url(../imgs/smoke.png) no-repeat;background-size:100% 100%;animation:smoke 2.44s infinite}
+.baomihua>.daizi{width:20%;height:23%;right:3%;bottom:1%;background:url(../imgs/daizi.png) no-repeat;background-size:100% 100%}
+.baomihua>.light{width:20%;height:14%;right:33%;bottom:16%;background:url(../imgs/light.png) no-repeat;background-size:100% 100%;animation:light 1.24s infinite}
+.baomihua>.dialog{width:88%;top:-38%;left:-2%}
+.baomihua>.remind{display:none;width:23%;height:30%;left:14%;top:-50%;background:url(../imgs/remind_down.png) no-repeat;background-size:100% 100%;animation:remindDownBaomihua 1.24s infinite}
+.ciqi{width:2%;height:17%;left:72.7%;top:57%}
+.ciqi>.ciqiHand{width:80%;height:30%;top:30%;left:0;background:url(../imgs/ciqi_hand.png) no-repeat;background-size:100% 100%;animation:ciqiHand 1s infinite}
+.ciqi>.ciqiBody{width:90%;height:100%;right:0;background:url(../imgs/ciqi.png) no-repeat;background-size:100% 100%}
+.ciqi>.remind{display:none;width:40%;height:30%;right:13%;top:-30%;background:url(../imgs/remind_down.png) no-repeat;background-size:100% 100%;animation:remindDownCiqi 1.24s infinite}
+.ciqi>.dialog{width:119%;height:40%;top:-38%;left:-2%}
+.cat{width:.7%;height:5%;left:76.1%;top:69%;background:url(../imgs/cat.png) no-repeat;background-size:100% 100%}
+#building>#crow{width:21%;height:5%;left:100%;top:40%;position:fixed;background:url(../imgs/crow.png) no-repeat;background-size:100% 100%}
+.photosPeople{width:3%;height:20%;left:92%;top:48%;background:url(../imgs/phone_people.png) no-repeat;background-size:100% 100%}
+.photosPeople>.peopleBody{width:60%;height:90%;right:7%;top:8%;background:url(../imgs/phone_people2.png) no-repeat;background-size:100% 100%}
+.photosPeople>.peopleHand{width:35%;height:18%;right:4%;top:37%;background:url(../imgs/phone_pose.png) no-repeat;background-size:100% 100%;animation:photoPose 1.48s infinite}
+.yongzheng{width:2.6%;height:20%;left:97.5%;top:66%}
+.yongzheng>.yongzhengBody{width:80%;height:100%;top:0;right:7%;background:url(../imgs/yongzheng.png) no-repeat;background-size:100% 100%}
+.yongzheng>.camera{width:155%;height:155%;top:-54%;left:-68%;background:url(../imgs/camera.png) no-repeat;background-size:100% 100%}
+.yongzheng>.yongzhengHand{width:30%;height:18%;top:34%;left:18%;background:url(../imgs/yongzheng_hand.png) no-repeat;background-size:100% 100%;animation:yongzhengHand 1.28s infinite}
+.yongzheng>.shining{width:41%;height:30%;top:2%;left:-71%;background:url(../imgs/star.png) no-repeat;background-size:100% 100%;animation:shining 1.84s infinite}
+.yongzheng>.remind{display:none;width:40%;height:30%;right:58%;top:-43%;background:url(../imgs/remind_down.png) no-repeat;background-size:100% 100%;animation:remindDownYongzheng 1.24s infinite}
+.yongzheng>.dialog{width:119%;height:40%;top:-38%;left:-41%}
+#page3>#building>#eunuch{position:fixed}
+.tanghulu{width:2%;height:23%;left:17.3%;top:63%}
+.tanghulu>.tanghuluBody{width:100%;height:100%;top:0;left:0;background:url(../imgs/tanghulu.png) no-repeat;background-size:100% 100%}
+.tanghulu>.yu{width:12%;height:14%;bottom:16%;right:13%;background:url(../imgs/yu.png) no-repeat;background-size:100% 100%;animation:yuMove 2s infinite}
+.tanghulu>.yushining{width:12%;height:14%;bottom:16%;right:13%;background:url(../imgs/yu_shining.png) no-repeat;background-size:100% 100%;animation:yuShining 2s infinite}
+.tanghulu>.remind{width:40%;height:30%;right:18%;top:-30%;background:url(../imgs/remind_down.png) no-repeat;background-size:100% 100%;animation:remindDownTanghulu 1.24s infinite}
+.tanghulu>#haveDaTie{opacity:0;width:134%;height:22%;left:-4%;top:-20%;background:url(../imgs/getfoods1.png) no-repeat;background-size:100% 100%}
+.tanghulu>#haveCiqi{opacity:0;width:134%;height:22%;left:-4%;top:-20%;background:url(../imgs/getfoods2.png) no-repeat;background-size:100% 100%}
+.eunuch{width:19%;height:20%;left:39.5%;top:65%}
+.eunuchBegin{animation:eunuchBegin 3s linear forwards}
+.eunuch>.eunuchBody{width:75%;height:97%;top:10%;left:5%;background:url(../imgs/eunuch.png) no-repeat;background-size:100% 100%}
+.eunuchBodyLeft{width:75%;height:97%;top:10%;left:5%;background:url(../imgs/eunuch.png) no-repeat;background-size:100% 100%;transform:rotateY(180deg)}
+.eunuch_walkLeft{width:200px;height:300px;// top:-87%;// left:-130%;top:-50%;left:-50%;animation:eunuchLeftWalk .6s steps(15,end) infinite}
+.eunuch_walkRight{width:200px;height:300px;// top:-87%;// left:-130%;top:-50%;left:-50%;transform:scale(.45);animation:eunuchRightWalk .6s steps(15,end) infinite}
+.tanghulu_walkLeft{width:300px;height:320px;top:-50%;left:-70%;transform:scale(.45);animation:tanghuluLeftWalk .56s steps(14,end) infinite}
+.tanghulu_walkRight{width:300px;height:320px;top:-50%;left:-150%;transform:scale(.45);animation:tanghuluRightWalk .56s steps(14,end) infinite}
+.eunuch>.dialog{width:139%;height:40%;top:-33%;left:-22%}
+.eunuch>#haveYu{opacity:0;width:130%;height:22%;left:-20%;top:-20%;background:url(../imgs/getfoods3.png) no-repeat;background-size:100% 100%}
+.eunuch>#haveBaoMiHua{opacity:0;width:130%;height:22%;left:-20%;top:-20%;background:url(../imgs/getfoods4.png) no-repeat;background-size:100% 100%}
+#building>#remindRight{display:none;position:fixed;width:10%;height:5%;right:10%;top:48%;background:url(../imgs/remind_right.png) no-repeat;background-size:100% 100%;animation:remindRight 1.24s infinite}
+#building>#remindLeft{display:none;position:fixed;width:10%;height:5%;left:10%;top:48%;background:url(../imgs/remind_left.png) no-repeat;background-size:100% 100%;animation:remindLeft 1.24s infinite}
+#page3>#talkBox{width:100%;height:100%;position:fixed;left:0;top:0;background:url(../imgs/talk_bg.png) no-repeat;background-size:100% 100%;display:none}
+#talkBox>.talkBoxStyle{width:100%;height:20%;top:42%}
+#bmhTalk,#ciqiTalk,#datieTalk,#eunuchTalk,#tanghuluTalk,#yzTalk{display:none}
+#eunuchTalk>.eunuchFaceStyle{width:19%;height:110%;left:10%;top:-18%}
+.eunuchFace1{background:url(../imgs/eunuchFace1.png) no-repeat;background-size:100% 100%}
+.eunuchFace2{background:url(../imgs/eunuchFace2.png) no-repeat;background-size:100% 100%}
+.eunuchFace3{background:url(../imgs/eunuchFace3.png) no-repeat;background-size:100% 100%}
+.eunuchFace4{background:url(../imgs/eunuchFace4.png) no-repeat;background-size:100% 100%}
+.eunuchFace5{background:url(../imgs/eunuchFace5.png) no-repeat;background-size:100% 100%}
+.eunuchFace6{background:url(../imgs/eunuchFace6.png) no-repeat;background-size:100% 100%}
+.eunuchFace7{background:url(../imgs/eunuchFace7.png) no-repeat;background-size:100% 100%}
+.text{width:55%;position:absolute;left:30%;top:20%;color:#000;font-size:1.2em;font-family:STHeiti,"Microsoft Yahei"}
+.other>.text{left:20%}
+.otherTalkFace{width:19%;height:110%;right:13%;top:-18%}
+.tanghuluFace{background:url(../imgs/tanghuluTalk.png) no-repeat;background-size:100% 100%}
+.datieFace{width:23%;background:url(../imgs/datie_talk.png) no-repeat;background-size:100% 100%}
+.ciqiFace{background:url(../imgs/ciqi_talk.png) no-repeat;background-size:100% 100%}
+.yzFace{background:url(../imgs/yongzheng_talk.png) no-repeat;background-size:100% 100%}
+.bmhFace{background:url(../imgs/baomihua_talk.png) no-repeat;background-size:100% 100%}
+#page3>#questionBox{width:100%;height:100%;position:fixed;top:0;left:0;background:url(../imgs/question_bg.png) no-repeat;background-size:100% 100%;display:none}
+#bmhQuestion,#cqQuestion,#dtQuestion,#getGoods1,#getGoods2,#getGoods3,#getGoods4,#questionContent{width:100%;height:100%}
+#bmhQuestion,#cqQuestion,#dtQuestion,#getGoods1,#getGoods2,#getGoods3,#getGoods4{display:none}
+#questionContent .pic{width:30%;height:18%;left:35%;top:18%}
+#dtQuestion>.pic{background:url(../imgs/datie_qlogo.png) no-repeat;background-size:100% 100%}
+.questionBoxShow{animation:questionBoxShow .6s ease-in-out forwards}
+.questionBoxEnd{animation:questionBoxEnd .6s forwards}
+#questionContent .text{width:60%;height:15%;top:40%;left:19%}
+#dtQuestion>.text{background:url(../imgs/datie_qtext.png) no-repeat;background-size:100% 100%}
+#dtQuestion>#lBtn{width:28%;height:6%;top:57%;left:20%;background:url(../imgs/datie_aleft.png) no-repeat;background-size:100% 100%}
+#dtQuestion>#rBtn{width:28%;height:6%;top:57%;right:20%;background:url(../imgs/datie_aright.png) no-repeat;background-size:100% 100%}
+.answerActive{animation:answerActive .2s forwards}
+#getGoods1>.pic{left:33%;top:20%;width:31%;height:15%;background:url(../imgs/datie_alogo.png) no-repeat;background-size:100% 100%}
+#getGoods1>.text{background:url(../imgs/goods1_text.png) no-repeat;background-size:100% 100%}
+#getGoods1>#getBtn{width:28%;height:6%;top:57%;left:36%;background:url(../imgs/get_btn.png) no-repeat;background-size:100% 100%}
+#cqQuestion>.pic{background:url(../imgs/ciqi_qlogo.png) no-repeat;background-size:100% 100%}
+#cqQuestion>.text{background:url(../imgs/ciqi_qtext.png) no-repeat;background-size:100% 100%}
+#cqQuestion>#lBtn2{width:28%;height:6%;top:57%;left:20%;background:url(../imgs/ciqi_aleft.png) no-repeat;background-size:100% 100%}
+#cqQuestion>#rBtn2{width:28%;height:6%;top:57%;right:20%;background:url(../imgs/ciqi_aright.png) no-repeat;background-size:100% 100%}
+#getGoods2>.pic{left:33%;top:20%;width:31%;height:15%;background:url(../imgs/ciqi_alogo.png) no-repeat;background-size:100% 100%}
+#getGoods2>.text{background:url(../imgs/goods2_text.png) no-repeat;background-size:100% 100%}
+#getGoods2>#getBtn2{width:28%;height:6%;top:57%;left:36%;background:url(../imgs/get_btn.png) no-repeat;background-size:100% 100%}
+#getGoods3>.pic{left:33%;top:20%;width:31%;height:15%;background:url(../imgs/yu_logo.png) no-repeat;background-size:100% 100%}
+#getGoods3>.text{background:url(../imgs/goods3_text.png) no-repeat;background-size:100% 100%}
+#getGoods3>#getBtn3{width:28%;height:6%;top:57%;left:36%;background:url(../imgs/get_btn.png) no-repeat;background-size:100% 100%}
+#bmhQuestion>.pic{background:url(../imgs/baomihua_qlogo.png) no-repeat;background-size:100% 100%}
+#bmhQuestion>.text{background:url(../imgs/baomihua_qtext.png) no-repeat;background-size:100% 100%}
+#bmhQuestion>#lBtn3{width:28%;height:6%;top:57%;left:20%;background:url(../imgs/baomihua_aleft.png) no-repeat;background-size:100% 100%}
+#bmhQuestion>#rBtn3{width:28%;height:6%;top:57%;right:20%;background:url(../imgs/baomihua_aright.png) no-repeat;background-size:100% 100%}
+#getGoods4>.pic{background:url(../imgs/baomihua_alogo.png) no-repeat;background-size:100% 100%}
+#getGoods4>.text{height:10%;top:43%;background:url(../imgs/goods4_text.png) no-repeat;background-size:100% 100%}
+#getGoods4>#getBtn4{width:28%;height:6%;top:57%;left:36%;background:url(../imgs/get_btn.png) no-repeat;background-size:100% 100%}
+#page4{width:100%;height:100%;position:absolute;left:0;top:0;overflow:hidden;z-index:4;display:none}
+#page4 div{position:absolute}
+#courBox2{width:100%;height:100%;top:0;left:0;background:url(../imgs/crow2.jpg) no-repeat;background-size:100% 100%}
+#courBox2>.yzHand{width:5%;height:2%;top:41.5%;left:49%;background:url(../imgs/yongzheng_hand2.png) no-repeat;background-size:100% 100%;animation:yongzhengHandMove .56s infinite}
+#courBox2>.head1{width:20%;height:12%;top:71.5%;left:22%;background:url(../imgs/page4_head1.png) no-repeat;background-size:100% 100%}
+.head1Active{animation:head1Move .56s infinite}
+.head1_2{width:20%;height:12%;top:71.5%;left:22%;background:url(../imgs/page4_head1_2.png) no-repeat;background-size:100% 100%}
+#courBox2>.head2{width:17%;height:12%;top:81.5%;left:3.2%;background:url(../imgs/page4_head2.png) no-repeat;background-size:100% 100%}
+.head2Active{animation:head2Move .96s infinite}
+#courBox2>.head3{width:18%;height:12%;top:83%;left:61%;background:url(../imgs/page4_head3.png) no-repeat;background-size:100% 100%}
+.head3Active{animation:head3Move 1s infinite}
+#courBox2>.head4{display:none;width:14%;height:13%;top:36%;left:68%;background:url(../imgs/page4_head4.png) no-repeat;background-size:100% 100%}
+#courBox2>.yongzhengTalk{width:34%;left:29%;top:20%;opacity:0}
+#courBox2 p{width:90%;height:100%;margin:6% 5% 16% 8%;font-size:.8em}
+.dialogRight2{background:url(../imgs/dialog2_r.png) no-repeat;background-size:100% 100%}
+#courBox2>.talk1{width:26%;left:52%;top:76%;opacity:0}
+#courBox2>.talk2{padding-left:2%;width:26%;left:7%;top:74%;opacity:0}
+#courBox2>.talk3{padding-left:2%;width:25%;left:27%;top:63%;opacity:0}
+#courBox2>.talk4{width:15%;padding-left:1%;left:64%;top:32%;opacity:0}
+.talkEnd{animation:talkEnd .32s forwards}
+.talkStart{animation:talkStart .56s forwards}
+#page5{width:100%;height:100%;position:absolute;left:0;top:0;overflow:hidden;z-index:5;display:none}
+#page5 div{position:absolute}
+#page5>.door{width:100%;height:100%}
+#page5>.door>img{width:50.5%;height:100%;position:absolute;opacity:0}
+#door2Right{right:0}
+.closeDoorLeft{animation:closeDoorLeft .5s ease-in-out .5s forwards}
+.closeDoorRight{animation:closeDoorRight .5s ease-in-out .5s forwards}
+#page5>.shengzhi{width:70%;height:55%;left:16%;top:15%;opacity:0;background:url(../imgs/shengzhi.jpg) no-repeat;background-size:100% 100%}
+.shengzhiShow{animation:shengzhiShow .96s 1s ease-in-out forwards}
+.juanzhou{width:94%;height:6%;top:10%;left:4%;background:url(../imgs/juanzhou.png) no-repeat;background-size:100% 100%;opacity:0}
+.juanzhou2{width:94%;height:6%;bottom:78.5%;left:4%;background:url(../imgs/juanzhou.png) no-repeat;background-size:100% 100%;opacity:0}
+.juanzhou2Show{animation:juanzhou2 .96s 1s ease-in-out forwards}
+.join{position:absolute;width:80%;height:10%;bottom:12%;left:9%;background:url(../imgs/join.png) no-repeat;background-size:100% 100%}
+.doorMo{width:100%;height:100%;top:0;left:0;opacity:0;background:url(../imgs/door_mohuceng.jpg) no-repeat;background-size:100% 100%}
+.doorMoShow{animation:show .5s 1s forwards}
+.joinShow{animation:joinShow .8s 1.96s infinite}
+.chuanzhi{width:30%;height:7%;bottom:18%;left:15.2%;opacity:0;background:url(../imgs/chuanzhi.png) no-repeat;background-size:100% 100%}
+.restart{width:30%;height:7%;bottom:18%;left:57.2%;opacity:0;background:url(../imgs/restart.png) no-repeat;background-size:100% 100%}
+.chuanzhiShow,.restartShow{animation:show .4s 1.96s forwards}
+.wyLogo{width:50%;height:7%;bottom:5%;left:25%;opacity:0;background:url(../imgs/wy_logo.png) no-repeat;background-size:100% 100%}
+.wyLogoShow{animation:show .4s 1.96s forwards}
+#page6{display:none;width:100%;height:100%;position:absolute;z-index:9;top:0;left:0;background:url(../imgs/mask.png) no-repeat;background-size:100% 100%}
+#page6 div{position:absolute}
+.shareContent{width:25%;height:15%;left:36%;top:23%}
+.shareContent>.hunterBody{width:100%;height:100%;background:url(../imgs/hunter_bottom.png) no-repeat;background-size:100% 100%}
+.shareContent>.hunterBody2{width:93%;height:66%;left:-3%;top:2%;background:url(../imgs/hunter_top.png) no-repeat;background-size:100% 100%;animation:shareHunterBody 1.6s infinite}
+.jian{width:54%;height:52%;left:44%;top:6%;background:url(../imgs/jian.png) no-repeat;background-size:100% 100%;animation:shejian 1.6s infinite}
+.xian{width:43%;height:52%;left:47%;top:8%;background:url(../imgs/laxian.png) no-repeat;background-size:100% 100%;animation:laxian 1.6s infinite}
