@@ -1,6 +1,6 @@
 # H5游戏 雍正去哪了
 
-项目地址: [demo](www.lymoozzc.com/phone/demo/index.html)
+项目地址: [demo](http://www.lymoozzc.com/phone/demo/index.html)
 
 纯原生CSS，JS编写，没有使用任何框架和插件，不足之处还请各位大神多多指教
 
