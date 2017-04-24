@@ -1,6 +1,6 @@
 # H5游戏 雍正去哪了
 
-## 项目地址: [demo](http://www.lymoozzc.com/phone/demo/index.html)
+## 项目地址: [demo](http://www.lymoozzc.com/phone/yzqnl/index.html)
 
 **用浏览器打开项目建议打开检查工具改成手机模式体验项目**
 
